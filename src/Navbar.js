@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row justify-between m-2 mx-8">
+    <div className="flex flex-row justify-between m-4 mx-8  text-white">
       <div className="flex flex-row w-full">
         <h1 className="uppercase text-3xl ">Netflix</h1>
         <MainNav />
@@ -38,7 +38,7 @@ const Navbar = () => {
         <NavLink className="links" to="/DVD">
           DVD
         </NavLink>
-        <BsBell size="24" />
+        <BsBell size="22" />
         <CgProfile size="24" />
       </div>
     </div>
@@ -48,7 +48,7 @@ const Navbar = () => {
 const BrowseMenu = () => {
   return (
     <div className="sidebar group-hover/menu:scale-100">
-      <span className="m-3 ">Home</span>
+      <span className="m-3">Home</span>
       <span className="m-3">TV Shows</span>
       <span className="m-3"> Movies</span>
       <span className="m-3">New & Popular</span>
@@ -60,7 +60,7 @@ const BrowseMenu = () => {
 
 const MainNav = () => {
   return (
-    <div className="sm:scale-0 md:scale-100 flex justify-between items-center ml-6">
+    <div className="sm:scale-0 md:scale-100 flex justify-between items-center ml-6 text-white">
       <NavLink className="links" to="/browse">
         Home
       </NavLink>
