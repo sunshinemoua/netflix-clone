@@ -7,6 +7,9 @@ module.exports = {
         gray: {
           450: "#303030",
         },
+        black: {
+          550: "#141414",
+        },
       },
     },
     screens: {
@@ -15,6 +18,17 @@ module.exports = {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+    },
+
+    fontFamily: {
+      "netflix-font": [
+        "Netflix Sans",
+        "Helvetica Neue",
+        "Segoe UI",
+        "Roboto",
+        "Ubuntu",
+        "sans-serif",
+      ],
     },
   },
   plugins: [],

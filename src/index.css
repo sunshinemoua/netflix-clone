@@ -22,7 +22,7 @@ body {
     text-white text-xs font-bold min-w-max transition-all duration-100 scale-0 origin-left;
   }
   .links {
-    @apply text-sm ml-2 hover:text-gray-450;
+    @apply text-[.84vw] ml-[18px] leading-[1.2] hover:text-gray-450 font-netflix-font;
   }
 }
 

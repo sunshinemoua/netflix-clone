@@ -6,13 +6,18 @@ import { BiSolidDownArrow } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
 
+const Logo = () => {
+  return (
+    <img src="logo.svg" alt="Netflix Logo" className="h-[1.885em] m-[.5px]" />
+  );
+};
+
 const Navbar = () => {
   return (
-    <div className="flex flex-row justify-between m-4 mx-8  text-white">
-      <div className="flex flex-row w-full">
-        <h1 className="uppercase text-3xl ">Netflix</h1>
-        <MainNav />
-      </div>
+    <div className="flex flex-row items-center my-[1.1%] px-[4%] h-[41px] bg-gradient-to-b from-black to-black-550 text-white">
+      <Logo />
+      <MainNav />
+
       {/* <div className="flex flex-row">
         <div className="group/menu flex flex-col">
           <div className="flex flex-row items-center justify-between w-56">
@@ -30,7 +35,7 @@ const Navbar = () => {
         <CgProfile size="25" />
       </div> */}
 
-      <div className="flex flex-row w-56 justify-between items-center m-2 ml-6">
+      {/* <div className="flex flex-row w-56 justify-between items-center m-2 ">
         <AiOutlineSearch size="24" />
         <NavLink className="links" to="/Kids">
           Kids
@@ -40,7 +45,7 @@ const Navbar = () => {
         </NavLink>
         <BsBell size="22" />
         <CgProfile size="24" />
-      </div>
+      </div> */}
     </div>
   );
 };
@@ -60,7 +65,7 @@ const BrowseMenu = () => {
 
 const MainNav = () => {
   return (
-    <div className="sm:scale-0 md:scale-100 flex justify-between items-center ml-6 text-white">
+    <div className="sm:scale-0 md:scale-100 flex items-center tracking-normal m-0 p-0 text-white">
       <NavLink className="links" to="/browse">
         Home
       </NavLink>
