@@ -10,21 +10,38 @@ body {
 
 @layer components {
   .sidebar {
-    @apply flex flex-col mt-6 items-center justify-center w-72 p-3 bg-gray-900 text-white opacity-95 cursor-pointer scale-0;
+    @apply flex flex-col mt-6 items-center justify-center w-72 p-3 bg-gray-900 text-white-250 opacity-95 cursor-pointer scale-0;
   }
   .sidebar-icon {
     @apply relative flex m-2 items-center justify-center h-12 w-12 mb-2 shadow-lg bg-gray-800 text-green-500 
-    hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-300 cursor-pointer;
+    hover:bg-green-600 hover:text-white-250 rounded-3xl hover:rounded-xl transition-all duration-300 cursor-pointer;
   }
 
   .sidebar-tooltip {
     @apply absolute w-auto p-2 m-3 left-14 rounded-md shadow-md bg-gray-900
-    text-white text-xs font-bold min-w-max transition-all duration-100 scale-0 origin-left;
+    text-white-250 text-xs font-bold min-w-max transition-all duration-100 scale-0 origin-left;
   }
   .links {
-    @apply text-[.84vw] ml-[18px] leading-[1.2] hover:text-gray-450 font-netflix-font;
+    @apply text-[13.5px] tracking-[.3px] ml-[18.25px] text-white-250 font-netflix-light  hover:text-gray-450 [&.active]:font-netflix-med;
   }
 }
 
+@font-face {
+  font-family: "netflix-reg";
+  src: url("../public/NetflixSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "netflix-light";
+  src: url("../public/NetflixSans-Light.ttf");
+}
+@font-face {
+  font-family: "netflix-med";
+  src: url("../public/NetflixSans-Medium.ttf");
+}
+@font-face {
+  font-family: "netflix-bold";
+  src: url("../public/NetflixSans-Bold.ttf");
+}
 /* group: apply css to child when the parent state changes ... do not work in apply
     so we have to use group in the className*/
