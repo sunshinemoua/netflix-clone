@@ -4,6 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        white: {
+          40: "FFF",
+          250: "#e5e5e5",
+        },
         gray: {
           450: "#303030",
         },
@@ -21,14 +25,11 @@ module.exports = {
     },
 
     fontFamily: {
-      "netflix-font": [
-        "Netflix Sans",
-        "Helvetica Neue",
-        "Segoe UI",
-        "Roboto",
-        "Ubuntu",
-        "sans-serif",
-      ],
+      "netflix-reg": ["netflix-reg", "sans-serif"],
+      "netflix-light": ["netflix-light", "sans-serif"],
+      "netflix-med": ["netflix-med", "sans-serif"],
+
+      "netflix-bold": ["netflix-bold", "sans-serif"],
     },
   },
   plugins: [],

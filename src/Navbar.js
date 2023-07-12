@@ -8,13 +8,37 @@ import { NavLink } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <img src="logo.svg" alt="Netflix Logo" className="h-[1.885em] m-[.5px]" />
+    <img
+      src="logo.svg"
+      alt="Netflix Logo"
+      className="h-[2.5rem] w-[6rem] p-[2px] "
+    />
+  );
+};
+
+const SearchIcon = () => {
+  return <img src="search-icon.svg" alt="Search Icon" size="24" />;
+};
+
+const BellIcon = () => {
+  return <img src="bell-icon.svg" alt="Bell Icon" size="24" />;
+};
+
+const ProfilePic = () => {
+  const url =
+    "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABeeZ_lXhCLhlNGwSD-pFlypYzOc7vo95M2zeHIewNZBwonSs8UquM8VnSASKYr_Vru36vii9Q4D02tOlLAa6Sy0Oi0eDGLs.png?r=59d";
+
+  return (
+    <div>
+      <img className="rounded" src={url} alt="Profile Icon"></img>
+      <span className="border-white border-solid border-y-[5px] h-0 w-0 ml-[10px]"></span>
+    </div>
   );
 };
 
 const Navbar = () => {
   return (
-    <div className="flex flex-row items-center my-[1.1%] px-[4%] h-[41px] bg-gradient-to-b from-black to-black-550 text-white">
+    <div className="flex flex-row items-center  px-[3.75vw] h-[68px] bg-black">
       <Logo />
       <MainNav />
 
@@ -33,18 +57,6 @@ const Navbar = () => {
         <AiOutlineSearch size="25" />
         <BsBell size="25" />
         <CgProfile size="25" />
-      </div> */}
-
-      {/* <div className="flex flex-row w-56 justify-between items-center m-2 ">
-        <AiOutlineSearch size="24" />
-        <NavLink className="links" to="/Kids">
-          Kids
-        </NavLink>
-        <NavLink className="links" to="/DVD">
-          DVD
-        </NavLink>
-        <BsBell size="22" />
-        <CgProfile size="24" />
       </div> */}
     </div>
   );
@@ -65,25 +77,39 @@ const BrowseMenu = () => {
 
 const MainNav = () => {
   return (
-    <div className="sm:scale-0 md:scale-100 flex items-center tracking-normal m-0 p-0 text-white">
-      <NavLink className="links" to="/browse">
-        Home
-      </NavLink>
-      <NavLink className="links" to="/browse/tv-shows">
-        TV Shows
-      </NavLink>
-      <NavLink className="links" to="/browse/movies">
-        Movies
-      </NavLink>
-      <NavLink className="links" to="/latest">
-        Latest
-      </NavLink>
-      <NavLink className="links" to="/browse/my-list">
-        My List
-      </NavLink>
-      <NavLink className="links" to="/browse/original-audio">
-        Browse By Languages
-      </NavLink>
+    <div className="flex flex-row w-full justify-between">
+      <div className="sm:scale-0 md:scale-100 flex items-center tracking-normal ml-[1.5rem] p-0 text-white">
+        <NavLink className="links" to="/">
+          Home
+        </NavLink>
+        <NavLink className="links" to="/browse/tv-shows">
+          TV Shows
+        </NavLink>
+        <NavLink className="links" to="/browse/movies">
+          Movies
+        </NavLink>
+        <NavLink className="links" to="/latest">
+          New & Popular
+        </NavLink>
+        <NavLink className="links" to="/browse/my-list">
+          My List
+        </NavLink>
+        <NavLink className="links" to="/browse/original-audio">
+          Browse by Languages
+        </NavLink>
+      </div>
+
+      <div className="flex w-56 items-center justify-between">
+        <SearchIcon />
+        <NavLink className="links" to="/Kids">
+          Kids
+        </NavLink>
+        <NavLink className="links" to="/DVD">
+          DVD
+        </NavLink>
+        <BellIcon />
+        <ProfilePic />
+      </div>
     </div>
   );
 };
